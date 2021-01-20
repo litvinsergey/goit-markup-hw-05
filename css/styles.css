@@ -629,10 +629,17 @@ address {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.works-list-item:hover .work-overlay {
+.works-list-link:hover .work-overlay,
+.works-list-link:focus .work-overlay {
   transform: translateY(-100%);
 }
 
+.works-list-link.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translatey(100%);
+}
 .work-img {
   display: block;
 }
